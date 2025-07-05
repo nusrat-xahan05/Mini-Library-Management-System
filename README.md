@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# 📚 Mini Library Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive library management system built with **React, TypeScript, Redux Toolkit Query, Tailwind CSS, and ShadCN UI**, with backend APIs built by **Express and MongoDB**. Users can view books, perform CRUD operations, borrow books, and see a borrow summary.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+✅ **Responsive UI** – Fully responsive on mobile, tablet, and desktop using TailwindCSS.  
+✅ **SweetAlert** – Provides beautiful toast for success/error.  
+✅ **Book Management** – View, add, edit, delete books.  
+✅ **Borrow Books** – Borrow copies of books, based on the available quantity.  
+✅ **Borrow Summary** – Shows total quantity borrowed for each book.  
+✅ **Typed RTK Query** – Strongly typed API calls for safety and autocompletion.  
+✅ **Modern UI** – Built with ShadCN components + Tailwind for a clean design.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✅ Technologies Used
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend | React, TypeScript, TailwindCSS, ShadCN UI**
+- **State Management | Redux Toolkit with RTK Query**
+- **Toast | SweetAlert2**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ✅ Actions Performed
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Confirmation dialog before delete operation**
+- **Check books availability before borrowing a book**
+- **Update book copies when any successful book purchase done**
+- **Show Notification for every successful & unsuccessful operation**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
