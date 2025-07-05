@@ -1,10 +1,10 @@
 import type { IAddBookRequest, IBook, IBookResponse, IBorrowBookRequest, IBorrowBookResponse, IBorrowSummaryResponse, IDeleteBookResponse, IGetBooksResponse } from '@/types'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-
+const baseUrl = import.meta.env.VITE_API_BASE_URL
 
 export const baseApi = createApi({
   reducerPath: 'baseApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/api' }),
+  baseQuery: fetchBaseQuery({ baseUrl }),
   tagTypes: ['book', 'borrow'],
   endpoints: (builder) => ({
     // ----- GET ALL BOOKS
